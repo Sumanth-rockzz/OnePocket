@@ -3,16 +3,25 @@ const express=require('express');
 
 const app=express();
 
+//importing sum to to display 
+
+const {sum}=require('./sum')
+
 app.listen(3000,()=>{
 console.log("Server is Running on Port 3000 using Express")
  });
+
+console.log(`Sum of Array Elements is ${sum}`);
 
 app.use((req,res)=>{
     res.send( 
         `
         <html>
         <head><title>OnePocket</title></head>
-        <body><h1>Server Running on Port 3000 Using Express</h1></body>
+        <body>
+        <h1>Server Running on Port 3000 Using Express</h1>
+        <h2>Sum of Array Elements is ${sum}</h2>
+        </body>
         </html>
         `
     );
