@@ -3,10 +3,10 @@ const express=require('express');
 
 const app=express();
 
-//importing sum ,textFileContent and wordCount to to display 
+//importing sum ,textFileContent and wordCount to to display from synchronous
 
 const {sum}=require('./sum')
-const {wordCount,fileText}=require('./wordCount');
+const {wordCount,fileText}=require('./syncWordCount')
 
 
 app.listen(3000,()=>{
